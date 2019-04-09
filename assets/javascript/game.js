@@ -22,6 +22,6 @@ var historyText  = document.getElementById("history-text");
         console.log(userGuess)
 
         if ((userGuess === "p") || (userGuess === "a") || (userGuess === "t") || (userGuess === "r") || (userGuess === "i") || (userGuess === "o")|| (userGuess === "t") || (userGuess === "s")) {
-            
+            return userGuess;
         }
     }
