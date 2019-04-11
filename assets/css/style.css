@@ -2,6 +2,7 @@
 #container {
     background-image: url("../images/1920-field-AdobeStock_100003169.jpg");
     background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -15,7 +16,7 @@ p {
     font-size: 12pt;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -28,21 +29,16 @@ h1 {
     display: inline;
 }
 
-#rightHeader {
+.rightHeader {
     width: 85%;
     padding: 0;
     display: inline;
+    text-align: center;
 }
 
 #leftHeaderBox {
     width: 15%;
     display: inline;
-}
-
-#rightHeaderBox {
-    width: 85%;
-    display: inline;
-    text-align: center;
 }
 
 .spacer {
@@ -57,6 +53,14 @@ h1 {
 #innerBody {
     background-color: white;
     width: 400px;
-    height: 150px;
+    height: 220px;
     margin: 0 auto;
+    padding: 40px;
+}
+
+#underscores {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25pt;
+    text-transform: capitalize;
 }

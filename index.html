@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible">
     <title>Document</title>
-    <link src="./assets/javascript/game.js" type="text/javacript">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 </head>
@@ -17,11 +16,11 @@
                 <img src="./assets/images/5895deb9cba9841eabab6099.png" alt="NFL Logo" style="width:100px;height:140px;">
             </div>
         </div>
-        <div id="rightHeader">
-            <div id="rightHeaderBox">
+        <div class="rightHeader">
+            <div class="rightHeader">
                 <br>
                 <h1>NFL Style Hangman!</h1>
-                <p>Try your hand at NFL hangman! To make this a bit of a challenge, only teams that made the playoffs last year (2018/19 Season) are included!! Good luck and press any key to start! You have <b>12</b> guesses.</p>
+                <p>Try your hand at NFL hangman! To make this a bit of a challenge, only teams that made the playoffs last year (2018/19 Season) are included!! Good luck and press any key to start! You have 12 guesses (keystrokes).</p>
             </div>
         </div>
     </header>
@@ -31,13 +30,19 @@
 
         <div id="mainBody">
             <div id="innerBody">
-                <p id="gameDirections-text">Press Any Key to Begin Game!</p>
+                <h3>Press Any Key to Begin Game!</h3>
+                <br>
                 <p id="wins-text">Wins: </p>
                 <p id="countdown-text">Guesses Left: </p>
                 <p id="history-text">Letters Guessed: </p>
+                <br>
+                <div id="underscores">
+                    
+                </div>
             </div>            
         </div>
         <div class="spacer"></div>
     </div>
+<script src="./assets/javascript/game.js"></script>
 </body>
 </html>
