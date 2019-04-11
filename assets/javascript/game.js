@@ -24,9 +24,9 @@ document.onkeyup = function(event) {
     var history = [];
     countdown--;
     history.push(userGuess)
-    //console.log(userGuess)
-    //console.log(countdown)
-    //console.log(history)
+    console.log(userGuess)
+    console.log(countdown)
+    console.log(history)
     document.getElementById("countdown-text").innerHTML = ("Guesses Left: " + countdown);
     document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history);
     //if ((userGuess === "p") || (userGuess === "a") || (userGuess === "t") || (userGuess === "r") || (userGuess === "i") || (userGuess === "o")|| (userGuess === "t") || (userGuess === "s")) {
@@ -34,6 +34,15 @@ document.onkeyup = function(event) {
         //}
     }
     
+// document.onkeyup = function() {
+    
+//     for (var i = 0; i > 12; i++) {
+//         confirm("You lost, do you want to try again?");
+//         if (okToRefresh)
+//         setTimeout("location.reload(true);",1500)
+//     }
+// }
+
 
 function printUnderscores(word) {
     //console.log(word.length);
