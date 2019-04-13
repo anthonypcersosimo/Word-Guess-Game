@@ -14,12 +14,13 @@ header {
 p {
     font-style: italic;
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 18pt;
     font-family: 'Sunflower', sans-serif;
 }
 
 #wins-text {
     color: green;
+    left: 10px;
 }
 
 h1, h3 {
@@ -57,12 +58,17 @@ h1, h3 {
 
 #innerBody {
     background-color: white;
-    width: 400px;
-    height: 250px;
+    width: 640px;
+    height: 400px;
     margin: 0 auto;
     padding: 40px;
     border-radius: 25px;
     font-family: 'Sunflower', sans-serif;
+    border-width: 6px;
+    border-style: outset;
+    border-color: rgb(59, 184, 1);
+    background-image: url("../images/JB.png");
+    background-size: cover;
 }
 
 #underscores {
@@ -70,4 +76,5 @@ h1, h3 {
     text-align: center;
     font-size: 25pt;
     text-transform: capitalize;
+    letter-spacing: 3pt;
 }

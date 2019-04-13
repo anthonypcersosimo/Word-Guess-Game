@@ -28,7 +28,7 @@ window.onload = function() {
 document.onkeyup = function(event) {
     
     var history = new Array();
-    console.log(userGuess)
+    var userGuess = new Array();
     console.log(countdown)
     console.log(history)
     // Determines which key was pressed.
@@ -36,31 +36,19 @@ document.onkeyup = function(event) {
     if(countdown > 0) {
         countdown--;
         var userGuess = event.key;
-        history.push(userGuess)
+        userGuess.push(String.fromCharCode(history))
+        console.log(userGuess)
         document.getElementById("wins-text").innerHTML = ("Wins: " + wins);
         document.getElementById("countdown-text").innerHTML = ("Guesses Left: " + countdown);
         document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history);
     }
+    
     else if(countdown < 1) {
         if (confirm("You lost, do you want to try again?")) {
             setTimeout("location.reload(true);",1500)
         }
     }
-        //if ((userGuess === "p") || (userGuess === "a") || (userGuess === "t") || (userGuess === "r") || (userGuess === "i") || (userGuess === "o")|| (userGuess === "t") || (userGuess === "s")) {
-            //return userGuess;
-            //}
-    }
-
-
-
-
-
-// for (var i = 0; i > 12; i++) {
-//     confirm("You lost, do you want to try again?");
-//     if (okToRefresh)
-//     setTimeout("location.reload(true);",1500)
-// }
-
+}
 
 function printUnderscores(word) {
     //console.log(word.length);
