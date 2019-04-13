@@ -16,31 +16,49 @@ var underscores  = document.getElementById("underscores");
 
 
 // This function is run whenever the user presses a key.
+window.onload = function() {
+    confirm("Welcome to NFL Hangman! In this game only teams that made the playoffs last year (2018/19 Season) are included! Good luck and Omaha.. Omaha set HUT!");
+    
+    document.getElementById("wins-text").innerHTML = ("Wins: 0");
+    document.getElementById("countdown-text").innerHTML = ("Guesses Left: 12");
+    document.getElementById("history-text").innerHTML = ("Letters Guessed: ");
+};
 
+//debugger;
 document.onkeyup = function(event) {
     
-    // Determines which key was pressed.
-    var userGuess = event.key;
-    var history = [];
-    countdown--;
-    history.push(userGuess)
+    var history = new Array();
     console.log(userGuess)
     console.log(countdown)
     console.log(history)
-    document.getElementById("countdown-text").innerHTML = ("Guesses Left: " + countdown);
-    document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history);
-    //if ((userGuess === "p") || (userGuess === "a") || (userGuess === "t") || (userGuess === "r") || (userGuess === "i") || (userGuess === "o")|| (userGuess === "t") || (userGuess === "s")) {
-        //return userGuess;
-        //}
+    // Determines which key was pressed.
+    
+    if(countdown > 0) {
+        countdown--;
+        var userGuess = event.key;
+        history.push(userGuess)
+        document.getElementById("wins-text").innerHTML = ("Wins: " + wins);
+        document.getElementById("countdown-text").innerHTML = ("Guesses Left: " + countdown);
+        document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history);
     }
-    
-// document.onkeyup = function() {
-    
-//     for (var i = 0; i > 12; i++) {
-//         confirm("You lost, do you want to try again?");
-//         if (okToRefresh)
-//         setTimeout("location.reload(true);",1500)
-//     }
+    else if(countdown < 1) {
+        if (confirm("You lost, do you want to try again?")) {
+            setTimeout("location.reload(true);",1500)
+        }
+    }
+        //if ((userGuess === "p") || (userGuess === "a") || (userGuess === "t") || (userGuess === "r") || (userGuess === "i") || (userGuess === "o")|| (userGuess === "t") || (userGuess === "s")) {
+            //return userGuess;
+            //}
+    }
+
+
+
+
+
+// for (var i = 0; i > 12; i++) {
+//     confirm("You lost, do you want to try again?");
+//     if (okToRefresh)
+//     setTimeout("location.reload(true);",1500)
 // }
 
 

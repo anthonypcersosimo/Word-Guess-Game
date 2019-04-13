@@ -1,8 +1,9 @@
 /*Giving the page a background*/
 #container {
     background-image: url("../images/1920-field-AdobeStock_100003169.jpg");
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 header {
@@ -13,7 +14,11 @@ header {
 p {
     font-style: italic;
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 14pt;
+}
+
+#wins-text {
+    color: green;
 }
 
 h1, h3 {
@@ -50,9 +55,10 @@ h1, h3 {
 #innerBody {
     background-color: white;
     width: 400px;
-    height: 220px;
+    height: 250px;
     margin: 0 auto;
     padding: 40px;
+    border-radius: 25px;
 }
 
 #underscores {
