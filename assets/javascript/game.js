@@ -5,6 +5,7 @@ var countdownText = document.getElementById("countdown-text");
 var historyText  = document.getElementById("history-text");
 var guessLeft  = document.getElementById("guess-left");
 var underscores  = document.getElementById("underscores");
+var history2 = [];
 
 
 // This function is run whenever the user presses a key.
@@ -33,13 +34,12 @@ window.onload = function() {
         //If game is running
         if(countdown > 0) {
             countdown--;
-            var history = [];
-            var userGuess = [event.key + ", "];
-            history.push(userGuess)
-            console.log(userGuess)
+            var userGuess = [" " + event.key];
+            history2.push(userGuess)
+            console.log(history2)
             document.getElementById("wins-text").innerHTML = ("Wins: " + wins);
             document.getElementById("countdown-text").innerHTML = ("Guesses Left: " + countdown);
-            document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history);
+            document.getElementById("history-text").innerHTML = ("Letters Guessed: " + history2);
             
             //Replace first letter of string UNFINISHED
             if (event.key === currWord[0]){
